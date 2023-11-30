@@ -36,7 +36,7 @@ const isDivisble = (dividend, divisor) => {
     return 0;
   }
 };
-let num=16;
+let num=44;
 firstDivisor=4;
 secondDivisor=11;
 let divisibleFirst=isDivisble(num,firstDivisor);
@@ -49,4 +49,46 @@ if(divisibleFirst && divisibleSecond){
     console.log("divisible by", secondDivisor)
 } else{
     console.log("not divisible by both ", divisibleFirst, "and", secondDivisor)
+}
+//password requirement checker
+// const passwordChecker=(pass)=>{
+//   if(pass.length>8 &&
+
+//     ){
+//     console.log("The ")
+//   }
+// }
+function passwordlength(pass){
+  if(pass.length>8){
+    return 1;
+  } else{
+    return 0;
+  }
+}
+function passwordNumber(pass){
+  let count=0;
+  for(let i=0; i<pass.length; i++){
+    for(let a=0; a<=9; a++){
+      if(pass[i]==a){
+        count++;
+      }
+    }
+  }
+  if(count>3){
+    return 1;
+  } else return 0;
+}
+function passwordUpper(pass){
+  let count=0;
+  for(let i=0; i<pass.length;i++){
+    for(let a=65; a<=90; a++){
+      if(pass.charCodeAt(i)==a){
+        count++;
+      }
+    }
+  }
+  console.log(count);
+  if(count>0){
+    return 1;
+  } else return 0;
 }
