@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Email:</p>
+    <input type="text" name="email" id="email" />
+    <button onclick="emailChecker()">Submit</button>
+    <p id="validEmail"></p>
+    <p>Password:</p>
+    <button onclick="hidePass()">Hide password</button>
+    <input type="text" name="password" id="password" onchange="passwordChecker()" />
+    <button onclick="passwordChecker()">Submit</button>
+    <p id="validPass"></p>
+    <p id="passReq"></p>
+    <script src="pass.js"></script>
+  </body>
+</html>
