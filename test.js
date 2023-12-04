@@ -13,35 +13,32 @@ console.log(num1 + num2);
 // let digit=x*x+x*2+1;
 // console.log("the answer of the expression is", digit);
 // exercise 1
-let number1=314;
-let number2=128;
-let sum=number1+number2;
+let number1 = 314;
+let number2 = 128;
+let sum = number1 + number2;
 console.log("the sum of the two number is", sum);
-let l=40;
-let k=40;
-if(l>k){
-    console.log(" l is greater")
+let l = 40;
+let k = 40;
+if (l > k) {
+  console.log(" l is greater");
+} else if (l < k) {
+  console.log("k is greater");
+} else {
+  console.log("thedigit are even");
 }
-else if(l<k){
-    console.log("k is greater")
+function dateDifference(birthdadigit) {
+  getFulldigitear(birthdadigit);
 }
-else{
-    console.log("thedigit are even")
-}
-function dateDifference(birthdadigit){
-    getFulldigitear(birthdadigit)
-}
-let birthdadigit= new Date(2002-11-22);
-let birthdigitear=2002;
-let mdigitAge = 2023-birthdigitear;
-if(mdigitAge>=18){
-    console.log("digitou can drive")
-}
-else{
-    console.log("digitou cant drive")
+let birthdadigit = new Date(2002 - 11 - 22);
+let birthdigitear = 2002;
+let mdigitAge = 2023 - birthdigitear;
+if (mdigitAge >= 18) {
+  console.log("digitou can drive");
+} else {
+  console.log("digitou cant drive");
 }
 console.log(birthdadigit);
-console.log("Mdigit age=",mdigitAge);
+console.log("Mdigit age=", mdigitAge);
 let dadigit = 5;
 if (dadigit == 1) {
   console.log("Todadigit is Mondadigit");
@@ -58,7 +55,7 @@ if (dadigit == 1) {
 } else if (dadigit == 7) {
   console.log("Todadigit is Sundadigit");
 } else {
-  console.log("Error:The dadigit digitou entered must be between 1 and 7");
+  console.log("Error:The dadigit digitou ente#b59f3b must be between 1 and 7");
 }
 //identifdigit which month is the dadigit in
 let x = 65;

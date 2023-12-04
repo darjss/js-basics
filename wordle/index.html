@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>Wordle</header>
+    <div class="container">
+        <div class="row" id="attemptOne">
+            <input type="text" class="box" id="letterFirst" maxlength="1" onchange="checkFirstLetter()">
+            <input type="text" class="box" id="letterSecond" maxlength="1" onchange="checkSecondLetter()">
+            <input type="text" class="box" id="letterThird" maxlength="1" onchange="checkThirdLetter()">
+            <input type="text" class="box" id="letterFourth" maxlength="1" onchange="checkFourthLetter()">
+            <input type="text" class="box" id="letterFifth" maxlength="1" onchange="checkFifthLetter()">
+        </div>
+        <div class="row" onchange="checkWord()">
+            <input type="text" class="box" id="letterFirst" maxlength="1">
+            <input type="text" class="box" id="letterSecond" maxlength="1">
+            <input type="text" class="box" id="letterThird" maxlength="1">
+            <input type="text" class="box" id="letterFourth" maxlength="1">
+            <input type="text" class="box" id="letterFifth" maxlength="1">
+        </div>
+        <div class="row" onchange="checkWord()">
+            <input type="text" class="box" id="letterFirst" maxlength="1">
+            <input type="text" class="box" id="letterSecond" maxlength="1">
+            <input type="text" class="box" id="letterThird" maxlength="1">
+            <input type="text" class="box" id="letterFourth" maxlength="1">
+            <input type="text" class="box" id="letterFifth" maxlength="1">
+        </div>
+        <div class="row" onchange="checkWord()">
+            <input type="text" class="box" id="letterFirst" maxlength="1">
+            <input type="text" class="box" id="letterSecond" maxlength="1">
+            <input type="text" class="box" id="letterThird" maxlength="1">
+            <input type="text" class="box" id="letterFourth" maxlength="1">
+            <input type="text" class="box" id="letterFifth" maxlength="1">
+        </div>
+        <div class="row" onchange="checkWord()">
+            <input type="text" class="box" id="letterFirst" maxlength="1">
+            <input type="text" class="box" id="letterSecond" maxlength="1">
+            <input type="text" class="box" id="letterThird" maxlength="1">
+            <input type="text" class="box" id="letterFourth" maxlength="1">
+            <input type="text" class="box" id="letterFifth" maxlength="1">
+        </div>
+        <div class="row" onchange="checkWord()">
+            <input type="text" class="box" id="letterFirst" maxlength="1">
+            <input type="text" class="box" id="letterSecond" maxlength="1">
+            <input type="text" class="box" id="letterThird" maxlength="1">
+            <input type="text" class="box" id="letterFourth" maxlength="1">
+            <input type="text" class="box" id="letterFifth" maxlength="1">
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #121213;
+}
+header {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.box {
+  background-color: #121213;
+  border: solid 1px #818384;
+  height: 60px;
+  width: 60px;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 2px;
+}
