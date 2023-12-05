@@ -37,3 +37,6 @@ header {
   font-size: 40px;
   border-radius: 2px;
 }
+.a2, .a3, .a4, .a5, .a6{
+  display: none;
+}
