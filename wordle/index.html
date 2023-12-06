@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Wordle Clone</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>Wordle</header>
     <div class="container">
+      <div class="popup" id="correct">
+        <p>✅You have guessed the word!</p>
+      </div>
+      <div class="popup" id="wrong">
+        <p>❌You did not guess the word!</p>
+      </div>
       <div class="row" id="attemptOne">
         <div class="box">
             <input type="text" class="box a1" id="a1l1" maxlength="1" />

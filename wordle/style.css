@@ -30,13 +30,19 @@ header {
 .box {
   background-color: #121213;
   border: solid 1px #818384;
-  height: 60px;
-  width: 60px;
+  height: 62px;
+  width: 62px;
   color: #fff;
   text-align: center;
-  font-size: 40px;
-  border-radius: 2px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .a2, .a3, .a4, .a5, .a6{
   display: none;
+}
+.popup{
+  color: #fff;
+  display: none;
+  padding-bottom: 20px;
 }
