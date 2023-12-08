@@ -1,4 +1,4 @@
-function prime(x){
+function isPrime(x){
     let counter=0;
     for(let i=1; i<x/2; i++){
         if(x%i==0){
@@ -6,11 +6,23 @@ function prime(x){
         }
     }
     if(counter>1){
-        console.log(x,"is not a prime number");
+        return false;
     } else{
-        console.log(x,"is a prime number");
+        return true;
     }
 }
-prime(17);
-let a=[13, 35, 47, 39, 11];
-a.map(prime);
+function findPrime(min, max){
+    let arr=[];
+    let count=0;
+    for(let i=min; i<=max; i++){
+        if(isPrime(i)){
+            arr[count]=i;
+            count++;
+        }
+    }
+    return arr;
+}
+let result=findPrime(0,10000000);
+console.log(result);
+
+

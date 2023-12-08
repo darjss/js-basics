@@ -6,9 +6,9 @@
     <title>Wordle Clone</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body onload="focusOn()">
     <header>Wordle</header>
-    <div class="container">
+    <div class="container flex">
       <div class="popup" id="correct">
         <p>✅You have guessed the word!</p>
       </div>
@@ -17,104 +17,325 @@
       </div>
       <div class="row" id="attemptOne">
         <div class="box">
-            <input type="text" class="box a1" id="a1l1" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a1" id="a1l2" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a1" id="a1l3" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a1" id="a1l4" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a1" id="a1l5" maxlength="1" onchange="checkFirstWord()" />
+          <input
+            type="text"
+            class="box a1"
+            id="1"
+            maxlength="1"
+            onkeyup="jump('2')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a1 aa"
+            id="2"
+            maxlength="1"
+            onkeyup="jump( '3')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a1 aa"
+            id="3"
+            maxlength="1"
+            onkeyup="jump( '4')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a1 aa"
+            id="4"
+            maxlength="1"
+            onkeyup="jump( '5')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a1 aa"
+            id="5"
+            maxlength="1"
+            onchange="checkFirstWord()"
+            onkeyup="jump( '6')"
+          />
         </div>
       </div>
       <div class="row" id="attemptTwo">
         <div class="box">
-            <input type="text" class="box a2" id="a2l1" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a2" id="a2l2" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a2" id="a2l3" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a2" id="a2l4" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a2" id="a2l5" maxlength="1" onchange="checkSecondWord()"/>
+          <input
+            type="text"
+            class="box a2"
+            id="6"
+            maxlength="1"
+            onkeyup="jump( '7')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a2"
+            id="7"
+            maxlength="1"
+            onkeyup="jump( '8')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a2"
+            id="8"
+            maxlength="1"
+            onkeyup="jump( '9')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a2"
+            id="9"
+            maxlength="1"
+            onkeyup="jump( '10')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a2"
+            id="10"
+            maxlength="1"
+            onchange="checkSecondWord()"
+            onkeyup="jump( '11')"
+          />
         </div>
       </div>
       <div class="row" id="attemptThree">
         <div class="box">
-            <input type="text" class="box a3" id="a3l1" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a3" id="a3l2" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a3" id="a3l3" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a3" id="a3l4" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a3" id="a3l5" maxlength="1" onchange="checkThirdWord()"/>
-      </div>
-      </div>
-      <div class="row">
-        <div class="box">
-            <input type="text" class="box a4" id="a4l1" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a4" id="a4l2" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a4" id="a4l3" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a4" id="a4l4" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a4" id="a4l5" maxlength="1" onchange="checkFourthWord()"/>
-      </div>
-      </div>
-      <div class="row">
-        <div class="box">
-            <input type="text" class="box a5" id="a5l1" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a5" id="a5l2" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a5" id="a5l3" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a5" id="a5l4" maxlength="1" />
-          </div>
-          <div class="box">
-            <input type="text" class="box a5" id="a5l5" maxlength="1" onchange="checkFifthWord()"/>
-      </div>
-      </div>
-      <div class="row">
-        <div class="box">
-          <input type="text" class="box a6" id="a6l1" maxlength="1" />
+          <input
+            type="text"
+            class="box a3"
+            id="11"
+            maxlength="1"
+            onkeyup="jump('12')"
+          />
         </div>
         <div class="box">
-          <input type="text" class="box a6" id="a6l2" maxlength="1" />
+          <input
+            type="text"
+            class="box a3"
+            id="12"
+            maxlength="1"
+            onkeyup="jump( '13')"
+          />
         </div>
         <div class="box">
-          <input type="text" class="box a6" id="a6l3" maxlength="1" />
+          <input
+            type="text"
+            class="box a3"
+            id="13"
+            maxlength="1"
+            onkeyup="jump( '14')"
+          />
         </div>
         <div class="box">
-          <input type="text" class="box a6" id="a6l4" maxlength="1" />
+          <input
+            type="text"
+            class="box a3"
+            id="14"
+            maxlength="1"
+            onkeyup="jump( '15')"
+          />
         </div>
         <div class="box">
-          <input type="text" class="box a6" id="a6l5" maxlength="1" onchange="checkSixthWord()"/>
+          <input
+            type="text"
+            class="box a3"
+            id="15"
+            maxlength="1"
+            onchange="checkThirdWord()"
+            onkeyup="jump( '16')"
+          />
+        </div>
+      </div>
+      <div class="row" id="attemptFour">
+        <div class="box">
+          <input
+            type="text"
+            class="box a4"
+            id="16"
+            maxlength="1"
+            onkeyup="jump( '17')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a4"
+            id="17"
+            maxlength="1"
+            onkeyup="jump( '18')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a4"
+            id="18"
+            maxlength="1"
+            onkeyup="jump( '19')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a4"
+            id="19"
+            maxlength="1"
+            onkeyup="jump( '20')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a4"
+            id="20"
+            maxlength="1"
+            onchange="checkFourthWord()"
+            onkeyup="jump( '21')"
+          />
+        </div>
+      </div>
+      <div class="row" id="attemptFive">
+        <div class="box">
+          <input
+            type="text"
+            class="box a5"
+            id="21"
+            maxlength="1"
+            onkeyup="jump( '22')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a5"
+            id="22"
+            maxlength="1"
+            onkeyup="jump( '23')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a5"
+            id="23"
+            maxlength="1"
+            onkeyup="jump( '24')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a5"
+            id="24"
+            maxlength="1"
+            onkeyup="jump( '25')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a5"
+            id="25"
+            maxlength="1"
+            onchange="checkFifthWord()"
+            onkeyup="jump( '26')"
+          />
+        </div>
+      </div>
+      <div class="row" id="attemptSix">
+        <div class="box">
+          <input
+            type="text"
+            class="box a6"
+            id="26"
+            maxlength="1"
+            onkeyup="jump( '27')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a6"
+            id="27"
+            maxlength="1"
+            onkeyup="jump( '28')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a6"
+            id="28"
+            maxlength="1"
+            onkeyup="jump( '29')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a6"
+            id="29"
+            maxlength="1"
+            onkeyup="jump( '30')"
+          />
+        </div>
+        <div class="box">
+          <input
+            type="text"
+            class="box a6"
+            id="30"
+            maxlength="1"
+            onchange="checkSixthWord()"
+          />
+        </div>
+      </div>
+      <p id="testing"></p>
+      <div class="keyboard flex">
+        <div class="krow flex">
+          <div class="letter" id="q" onclick="writeT('q')">q</div>
+          <div class="letter" id="w" onclick="writeT('w')">w</div>
+          <div class="letter" id="e" onclick="writeT('e')">e</div>
+          <div class="letter" id="r" onclick="writeT('r')">r</div>
+          <div class="letter" id="t" onclick="writeT('t')">t</div>
+          <div class="letter" id="y" onclick="writeT('y')">y</div>
+          <div class="letter" id="u" onclick="writeT('u')">u</div>
+          <div class="letter" id="i" onclick="writeT('i')">i</div>
+          <div class="letter" id="o" onclick="writeT('o')">o</div>
+          <div class="letter" id="p" onclick="writeT('p')">p</div>
+        </div>
+        <div class="krow flex">
+          <div class="letter" id="a" onclick="writeT('a')">a</div>
+          <div class="letter" id="s" onclick="writeT('s')">s</div>
+          <div class="letter" id="d" onclick="writeT('d')">d</div>
+          <div class="letter" id="f" onclick="writeT('f')">f</div>
+          <div class="letter" id="g" onclick="writeT('g')">g</div>
+          <div class="letter" id="h" onclick="writeT('h')">h</div>
+          <div class="letter" id="j" onclick="writeT('j')">j</div>
+          <div class="letter" id="k" onclick="writeT('k')">k</div>
+          <div class="letter" id="l" onclick="writeT('l')">l</div>
+        </div>
+        <div class="krow flex">
+          <div class="letter" id="z" onclick="writeT('z')">z</div>
+          <div class="letter" id="x" onclick="writeT('x')">x</div>
+          <div class="letter" id="c" onclick="writeT('c')">c</div>
+          <div class="letter" id="v" onclick="writeT('v')">v</div>
+          <div class="letter" id="b" onclick="writeT('b')">b</div>
+          <div class="letter" id="n" onclick="writeT('n')">n</div>
+          <div class="letter" id="m" onclick="writeT('m')">m</div>
+        </div>
       </div>
     </div>
     <script src="./script.js"></script>

@@ -1,3 +1,4 @@
+let currentSelected = "1";
 function randomWord() {
   let fiveLetterWords = [
     "apple",
@@ -111,7 +112,7 @@ function randomWord() {
     "child",
     "learn",
     "glass",
-    "heart"
+    "heart",
   ];
   let random = Math.floor(Math.random() * 100);
   return fiveLetterWords[random];
@@ -122,6 +123,7 @@ function checkFirstLetter(id) {
   if (letter == word[0]) {
     document.getElementById(id).style.backgroundColor = "#538d43";
     document.getElementById(id).style.border = "solid 1px #538d43";
+    document.getElementById(letter).style.backgroundColor = "#538d43";
     return 1;
   } else if (
     letter == word[1] ||
@@ -130,9 +132,11 @@ function checkFirstLetter(id) {
     letter == word[4]
   ) {
     document.getElementById(id).style.backgroundColor = "#b59f3b";
-    document.getElementById(id).style.border = "solid 1px #538d43";
+    document.getElementById(id).style.border = "solid 1px #b59f3b";
+    document.getElementById(letter).style.backgroundColor = "#b59f3b";
   } else {
-    document.getElementById(id).style.backgroundColor = "#818384";
+    document.getElementById(id).style.backgroundColor = "#3A3A3C";
+    document.getElementById(letter).style.backgroundColor = "#3A3A3C";
     return 0;
   }
 }
@@ -141,6 +145,7 @@ function checkSecondLetter(id) {
   if (letter == word[1]) {
     document.getElementById(id).style.backgroundColor = "#538d43";
     document.getElementById(id).style.border = "solid 1px #538d43";
+    document.getElementById(letter).style.backgroundColor = "#538d43";
     return 1;
   } else if (
     letter == word[0] ||
@@ -150,8 +155,10 @@ function checkSecondLetter(id) {
   ) {
     document.getElementById(id).style.backgroundColor = "#b59f3b";
     document.getElementById(id).style.border = "solid 1px #b59f3b";
+    document.getElementById(letter).style.backgroundColor = "#b59f3b";
   } else {
-    document.getElementById(id).style.backgroundColor = "#818384";
+    document.getElementById(id).style.backgroundColor = "#3A3A3C";
+    document.getElementById(letter).style.backgroundColor = "#3A3A3C";
     return 0;
   }
 }
@@ -160,6 +167,7 @@ function checkThirdLetter(id) {
   if (letter == word[2]) {
     document.getElementById(id).style.backgroundColor = "#538d43";
     document.getElementById(id).style.border = "solid 1px #538d43";
+    document.getElementById(letter).style.backgroundColor = "#538d43";
     return 1;
   } else if (
     letter == word[1] ||
@@ -169,8 +177,10 @@ function checkThirdLetter(id) {
   ) {
     document.getElementById(id).style.backgroundColor = "#b59f3b";
     document.getElementById(id).style.border = "solid 1px #b59f3b";
+    document.getElementById(letter).style.backgroundColor = "#b59f3b";
   } else {
-    document.getElementById(id).style.backgroundColor = "#818384";
+    document.getElementById(id).style.backgroundColor = "#3A3A3C";
+    document.getElementById(letter).style.backgroundColor = "#3A3A3C";
     return 0;
   }
 }
@@ -179,6 +189,7 @@ function checkFourthLetter(id) {
   if (letter == word[3]) {
     document.getElementById(id).style.backgroundColor = "#538d43";
     document.getElementById(id).style.border = "solid 1px #538d43";
+    document.getElementById(letter).style.backgroundColor = "#538d43";
     return 1;
   } else if (
     letter == word[1] ||
@@ -188,8 +199,10 @@ function checkFourthLetter(id) {
   ) {
     document.getElementById(id).style.backgroundColor = "#b59f3b";
     document.getElementById(id).style.border = "solid 1px #b59f3b";
+    document.getElementById(letter).style.backgroundColor = "#b59f3b";
   } else {
-    document.getElementById(id).style.backgroundColor = "#818384";
+    document.getElementById(id).style.backgroundColor = "#3A3A3C";
+    document.getElementById(letter).style.backgroundColor = "#3A3A3C";
     return 0;
   }
 }
@@ -198,6 +211,7 @@ function checkFifthLetter(id) {
   if (letter == word[4]) {
     document.getElementById(id).style.backgroundColor = "#538d43";
     document.getElementById(id).style.backgroundColor = "#538d43";
+    document.getElementById(letter).style.backgroundColor = "#538d43";
     return 1;
   } else if (
     letter == word[1] ||
@@ -207,100 +221,124 @@ function checkFifthLetter(id) {
   ) {
     document.getElementById(id).style.backgroundColor = "#b59f3b";
     document.getElementById(id).style.border = "solid 1px #b59f3b";
+    document.getElementById(letter).style.backgroundColor = "#b59f3b";
   } else {
-    document.getElementById(id).style.backgroundColor = "#818384";
+    document.getElementById(id).style.backgroundColor = "#3A3A3C";
+    document.getElementById(letter).style.backgroundColor = "#3A3A3C";
     return 0;
   }
 }
 function checkFirstWord() {
-  let oneL = checkFirstLetter("a1l1");
-  let twoL = checkSecondLetter("a1l2");
-  let threeL = checkThirdLetter("a1l3");
-  let fourL = checkFourthLetter("a1l4");
-  let fiveL = checkFifthLetter("a1l5");
+  let oneL = checkFirstLetter("1");
+  let twoL = checkSecondLetter("2");
+  let threeL = checkThirdLetter("3");
+  let fourL = checkFourthLetter("4");
+  let fiveL = checkFifthLetter("5");
   if (oneL && twoL && threeL && fourL && fiveL) {
     document.getElementById("correct").style.display = "block";
   } else {
-    document.getElementById("a2l1").style.display = "block";
-    document.getElementById("a2l2").style.display = "block";
-    document.getElementById("a2l3").style.display = "block";
-    document.getElementById("a2l4").style.display = "block";
-    document.getElementById("a2l5").style.display = "block";
+    document.getElementById("6").style.display = "block";
   }
 }
 function checkSecondWord() {
-  let oneL = checkFirstLetter("a2l1");
-  let twoL = checkSecondLetter("a2l2");
-  let threeL = checkThirdLetter("a2l3");
-  let fourL = checkFourthLetter("a2l4");
-  let fiveL = checkFifthLetter("a2l5");
+  let oneL = checkFirstLetter("6");
+  let twoL = checkSecondLetter("7");
+  let threeL = checkThirdLetter("8");
+  let fourL = checkFourthLetter("9");
+  let fiveL = checkFifthLetter("10");
   if (oneL && twoL && threeL && fourL && fiveL) {
     document.getElementById("correct").style.display = "block";
   } else {
-    document.getElementById("a3l1").style.display = "block";
-    document.getElementById("a3l2").style.display = "block";
-    document.getElementById("a3l3").style.display = "block";
-    document.getElementById("a3l4").style.display = "block";
-    document.getElementById("a3l5").style.display = "block";
+    document.getElementById("11").style.display = "block";
   }
 }
 function checkThirdWord() {
-  let oneL = checkFirstLetter("a3l1");
-  let twoL = checkSecondLetter("a3l2");
-  let threeL = checkThirdLetter("a3l3");
-  let fourL = checkFourthLetter("a3l4");
-  let fiveL = checkFifthLetter("a3l5");
+  let oneL = checkFirstLetter("11");
+  let twoL = checkSecondLetter("12");
+  let threeL = checkThirdLetter("13");
+  let fourL = checkFourthLetter("14");
+  let fiveL = checkFifthLetter("15");
   if (oneL && twoL && threeL && fourL && fiveL) {
     document.getElementById("correct").style.display = "block";
   } else {
-    document.getElementById("a4l1").style.display = "block";
-    document.getElementById("a4l2").style.display = "block";
-    document.getElementById("a4l3").style.display = "block";
-    document.getElementById("a4l4").style.display = "block";
-    document.getElementById("a4l5").style.display = "block";
+    document.getElementById("16").style.display = "block";
   }
 }
 function checkFourthWord() {
-  let oneL = checkFirstLetter("a4l1");
-  let twoL = checkSecondLetter("a4l2");
-  let threeL = checkThirdLetter("a4l3");
-  let fourL = checkFourthLetter("a4l4");
-  let fiveL = checkFifthLetter("a4l5");
+  let oneL = checkFirstLetter("16");
+  let twoL = checkSecondLetter("17");
+  let threeL = checkThirdLetter("18");
+  let fourL = checkFourthLetter("19");
+  let fiveL = checkFifthLetter("20");
   if (oneL && twoL && threeL && fourL && fiveL) {
     document.getElementById("correct").style.display = "block";
   } else {
-    document.getElementById("a5l1").style.display = "block";
-    document.getElementById("a5l2").style.display = "block";
-    document.getElementById("a5l3").style.display = "block";
-    document.getElementById("a5l4").style.display = "block";
-    document.getElementById("a5l5").style.display = "block";
+    document.getElementById("21").style.display = "block";
   }
 }
 function checkFifthWord() {
-  let oneL = checkFirstLetter("a5l1");
-  let twoL = checkSecondLetter("a5l2");
-  let threeL = checkThirdLetter("a5l3");
-  let fourL = checkFourthLetter("a5l4");
-  let fiveL = checkFifthLetter("a5l5");
+  let oneL = checkFirstLetter("21");
+  let twoL = checkSecondLetter("22");
+  let threeL = checkThirdLetter("23");
+  let fourL = checkFourthLetter("24");
+  let fiveL = checkFifthLetter("25");
   if (oneL && twoL && threeL && fourL && fiveL) {
     document.getElementById("correct").style.display = "block";
   } else {
-    document.getElementById("a6l1").style.display = "block";
-    document.getElementById("a6l2").style.display = "block";
-    document.getElementById("a6l3").style.display = "block";
-    document.getElementById("a6l4").style.display = "block";
-    document.getElementById("a6l5").style.display = "block";
+    document.getElementById("26").style.display = "block";
   }
 }
 function checkSixthWord() {
-  let oneL = checkFirstLetter("a6l1");
-  let twoL = checkSecondLetter("a6l2");
-  let threeL = checkThirdLetter("a6l3");
-  let fourL = checkFourthLetter("a6l4");
-  let fiveL = checkFifthLetter("a6l5");
+  let oneL = checkFirstLetter("26");
+  let twoL = checkSecondLetter("27");
+  let threeL = checkThirdLetter("28");
+  let fourL = checkFourthLetter("29");
+  let fiveL = checkFifthLetter("30");
   if (oneL && twoL && threeL && fourL && fiveL) {
     document.getElementById("correct").style.display = "block";
   } else {
     document.getElementById("wrong").style.display = "block";
   }
 }
+function jump(id) {
+  document.addEventListener("keyup", (event) => {
+    let key = event.key;
+    let code = key.charCodeAt(0);
+    if (code >= 97 && code <= 122) {
+      document.getElementById(id).style.display = "block";
+      document.getElementById(id).focus();
+      currentSelected=id;
+    }
+  });
+}
+function writeT(id) {
+  document.getElementById(currentSelected).value =
+    document.getElementById(id).innerHTML;
+    currentNum=Number(currentSelected)+1;
+  currentSelected =currentNum.toString();
+  document.getElementById(currentSelected).style.display = "block";
+  if(currentSelected==6){
+    checkFirstWord();
+  } else if(currentSelected==11){
+    checkSecondWord();
+  } else if(currentSelected==16){
+    checkThirdWord();
+  } else if(currentSelected==21){
+    checkFourthWord();
+  } else if(currentSelected==26){
+    checkFifthWord();
+  } else if(currentSelected>30){
+    checkSixthWord();
+  }
+}
+function focusOn(){
+  document.getElementById("1").focus();
+}
+// function removeLetter(){
+//   document.addEventListener("keydown", (event)=>{
+//     let key=event.key;
+//     if(key==){
+
+//     }
+//   });
+// }

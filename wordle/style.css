@@ -13,14 +13,19 @@ header {
   text-align: center;
   padding-bottom: 150px;
 }
-
+p{
+  color: #fff;
+}
 .container {
   max-width: 1024px;
   margin: 0 auto;
+  flex-direction: column;
+}
+.flex{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+
 }
 .row {
   display: flex;
@@ -38,11 +43,35 @@ header {
   font-weight: 700;
   text-transform: uppercase;
 }
-.a2, .a3, .a4, .a5, .a6{
+.aa ,.a2, .a3, .a4, .a5, .a6{
   display: none;
 }
 .popup{
   color: #fff;
   display: none;
   padding-bottom: 20px;
+}
+.letter{
+  width: 43px;
+  height: 58px;
+  background-color: #818384;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+}
+.keyboard{
+  padding-top: 70px;
+  flex-direction: column;
+  gap: 10px;
+}
+.krow{
+  gap:5px;
+}
+.letter:hover{
+  cursor: pointer;
 }

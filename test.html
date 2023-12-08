@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test test test</title>
   </head>
+  <!-- <style>
+    input{
+      text-transform: uppercase;
+    }
+
+  </style> -->
   <body>
-    <input type="text" onkeydown="jump(this, this.value,'first')" id="first" tabindex="0"/>
-    <input type="text" onkeydown="jump(this, this.value,'second')" id="second" tabindex="1"/>
-    <input type="text" onkeydown="jump(this, this.value,'third')" id="third" tabindex="2"/>
-    <input type="text" onkeydown="jump(this, this.value,'fourth')" id="fourth" tabindex="3"/>
+    <form name="jumping" id="jumper">
+      <input type="text" onkeyup="jump(this, this.value,'first')"  tabindex="0" maxlength="1" />
+      <input type="text" onkeyup="jump(this, this.value,'second')"  tabindex="1" maxlength="1"/>
+      <input type="text" onkeyup="jump(this, this.value,'third')"  tabindex="2" maxlength="1"/>
+      <input type="text" onkeyup="jump(this, this.value,'fourth')"  tabindex="3" maxlength="1"/>
+    </form>
+
     <p id="demo"></p>
     <script>
-      function jump(elmnt, content, id) {
-        document.addEventListener("keydown", (event) => {
+      function jump(elmnt, content) {
+
+          document.addEventListener("keyup", (event) => {
           let key = event.key;
           let code = key.charCodeAt(0);
-        //   console.log(code);
-          if (code >= 97 && code <= 122) {
-            let next = elmnt.tabIndex + 1;
+          // console.log(code);
+          if (code >= 97 && code<=122) {
+            let next = elmnt.tabIndex+1;
+            // elmnt.setAttribute('tabindex', next)
             // console.log(next);
-            document.getElementById(id).elements[next].focus();
+            document.getElementById("jumper").elements[next].focus();
           }
         });
-      }
+        }
+      
     </script>
   </body>
 </html>
