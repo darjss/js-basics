@@ -303,11 +303,18 @@ function checkSixthWord() {
 function jump(id) {
   document.addEventListener("keyup", (event) => {
     let key = event.key;
+    console.log(key);
+    console.log(typeof key);
     let code = key.charCodeAt(0);
     if (code >= 97 && code <= 122) {
       document.getElementById(id).style.display = "block";
       document.getElementById(id).focus();
       currentSelected=id;
+    } else if(key=="Backspace"){
+        let curNum=Number(currentSelected)+-1;
+        let curStr=curNum.toString();
+        document.getElementById(curStr).focus();
+        document.getElementById(curStr).innerHTML="";
     }
   });
 }
