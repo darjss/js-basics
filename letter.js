@@ -9,7 +9,7 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.`
 function countLetter(a){
     let count=0
     let letter=String.fromCharCode(a);
-    let bigLetter=String.fromCharCode(a-32)
+    let bigLetter=String.fromCharCode(a-32);
     for(let i=0; i<sentence.length; i++){
         if(sentence[i]==letter || sentence[i]==bigLetter){
             count++;
@@ -35,19 +35,16 @@ function seperateArray(data){
             wStart=0;
             for(let j=pos; j<i; j++){
                 if(data[j]==" "){
+                    a[count][wordCount]="";
                     for(let k=wStart; k<j; k++){
-                        a[count][wordCount]="";
                         a[count][wordCount]+=data[k];
-                        // console.log(wordCount);
-                        console.log(wStart);
-                        // console.log(k);
                     }
                     wStart=j+1;
-                    wordCount++
+                    wordCount++;
                 }
             }
-            pos=i+1
-            count++
+            pos=i+1;
+            count++;
         }
     }
     console.log(a);
@@ -55,7 +52,7 @@ function seperateArray(data){
 seperateArray(sentence);
 function seperateWord(words){
     let a=[];
-    let pos=0
+    let pos=0;
     let count=0;
     for(let i=0; i<words.length; i++){
         if(words[i]==" "){
