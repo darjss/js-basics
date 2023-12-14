@@ -35,10 +35,7 @@ function prime(x){
         console.log(x,"is a prime number");
     }
 }
-prime(17);
 let a=[13, 35, 47, 39, 11];
 a.map(prime);
-a.map((a)=>{
-    console.log(a);
-})
+
 
