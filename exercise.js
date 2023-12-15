@@ -196,6 +196,7 @@ const calcCategoryCost=(arr)=>{
 }
 // let result= calcCategoryCost(shoppingCartItems);
 // console.log(result);
+
 const filterCategory=(arr)=>{
     let test=Object.groupBy(arr,({category})=> category);
     return test;
